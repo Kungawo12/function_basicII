@@ -14,3 +14,11 @@ def reverse_num(list):
 list_name =reverse_num([1,2,3,4,5])
 
 print(list_name)
+
+# 2.Print and Return - Create a function that will receive a list with two numbers. Print the first value and return the second.
+#Example: print_and_return([1,2]) should print 1 and return 2
+def numbers(x,y):
+    print (x)
+    return (y)
+
+print(numbers(1,2))
