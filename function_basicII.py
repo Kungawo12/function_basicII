@@ -1,20 +1,12 @@
 # 1. Countdown - Create a function that accepts a number as an input. Return a new list that counts down by one, from the number (as the 0th element) down to 0 (as the last element).
 # Example: countdown(5) should return [5,4,3,2,1,0]
-def reverse_num(list):
-    left = 0
-    right = len(list)-1
-    while (left < right):
-        temp = list[left]
-        list[left] = list[right]
-        list[right] = temp
-        left += 1
-        right -= 1
-    return list
+def countdown(number):
+    new_countdown = []
+    for i in range(number,-1,-1):
+        new_countdown.append(i)
+    return new_countdown
 
-list_name =reverse_num([1,2,3,4,5])
-
-print(list_name)
-
+print(countdown(5))
 # 2.Print and Return - Create a function that will receive a list with two numbers. Print the first value and return the second.
 #Example: print_and_return([1,2]) should print 1 and return 2
 def numbers(x,y):
@@ -37,15 +29,14 @@ print(sum_of_first_value([1,2,3,4,5,6]))
 # Example: values_greater_than_second([3]) should return False
 
 def values_greater_than_second(list_group):
+    if len(list_group)<2 :
+        return False
     new_list = []
     list = []
     for i in range(len(list_group)):
         if list_group[i]> list_group[2] :
             new_list.append(list_group[i])
-        else:
-            list.append(list_group[i])
-            if len(list)< 2:
-                return False
+
 
     print(len(new_list))
     print(len(list_group))
@@ -53,6 +44,7 @@ def values_greater_than_second(list_group):
     return new_list
 
 print(values_greater_than_second([5,2,3,2,1,4]))
+print(values_greater_than_second([3]))
 
 #5. This Length, That Value - Write a function that accepts two integers as parameters: size and value. The function should create and return a list whose length is equal to the given size, and whose values are all the given value.
 # Example: length_and_value(4,7) should return [7,7,7,7]
@@ -63,3 +55,4 @@ def length_and_value(size,value):
     return [value] * size
 
 print(length_and_value(6,2))
+print(length_and_value(4,7))
